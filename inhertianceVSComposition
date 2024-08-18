@@ -1,0 +1,20 @@
+**composition vs Inheritance**
+
+Inheritance:
+When to Use:
+  .When there is a clear hierarchical relationship (e.g., Dog is a Mammal).
+  .When you want to leverage polymorphism and have a common interface across related classes.
+  .When you need to extend the functionality of an existing class.
+
+Composition:
+When to Use:
+  .When you want to model a "has-a" relationship (e.g., House has Rooms).
+  .When you want to design classes that are easier to maintain and modify.
+  .When you need to favor composition over inheritance to avoid the limitations and complexities of deep inheritance hierarchies.
+
+Comparison
+  Reuse: Both inheritance and composition allow code reuse. However, inheritance is more rigid, while composition offers more flexibility.
+  
+  Coupling: Inheritance creates a strong coupling between the parent and child classes. Composition tends to create loosely coupled systems, making them easier to change and maintain.
+  
+  Design: Inheritance is often used for extending the functionality of existing classes in a hierarchical manner. Composition is used to build more modular and maintainable systems by combining different objects.

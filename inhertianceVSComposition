@@ -1,12 +1,12 @@
 **composition vs Inheritance**
 
-Inheritance:
+**Inheritance**:
 When to Use:
   .When there is a clear hierarchical relationship (e.g., Dog is a Mammal).
   .When you want to leverage polymorphism and have a common interface across related classes.
   .When you need to extend the functionality of an existing class.
 
-Composition:
+**Composition**:
 When to Use:
   .When you want to model a "has-a" relationship (e.g., House has Rooms).
   .When you want to design classes that are easier to maintain and modify.

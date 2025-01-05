@@ -69,6 +69,31 @@
               Sometimes, messages may be processed more than once, leading to duplicates. This can happen due to retries or errors in the system.<br>
        **>>Latency:** <br>
               There can be delays between when a message is sent and when it is processed. If the queue becomes too long, it may take some time for a message to reach the consumer.<br>
+
+
+3.**What is CDN?** <br>
+       A Content Delivery Network (CDN) is a distributed network of servers strategically located across the globe to deliver content<br>
+       (e.g., web pages, images, videos, and other assets) to users more quickly and reliably. The main goal of a CDN is to reduce latency and improve<br> 
+       the performance, scalability, and availability of web services.<br>
+       <br>
+       **How a CDN Works** <br>
+        **Content Caching:**<br>
+              The CDN caches content at multiple servers (called edge servers) located in various geographic locations. These servers are closer to end users than the origin server.<br>
+       **User Request Handling:** <br>
+       When a user requests content (e.g., visiting a website), the CDN routes the request to the nearest edge server instead of the origin server.<br>
+       **Dynamic and Static Content:** <br>
+       Static Content (e.g., images, stylesheets, JavaScript): Served directly from edge servers.<br>
+       Dynamic Content (e.g., personalized pages, APIs): Retrieved from the origin server but often optimized for faster delivery.<br>
+       **Load Balancing:** <br>
+              Distributes requests among multiple edge servers to prevent overloading and ensure high availability.<br>
+       <br>
+       **Benefits of a CDN** <br>
+       Reduced Latency, Faster Load times, Scalability,Increased Availability(-CDNs provide redundancy; if one server fails, another can take over, ensuring content remains accessible.)<br>
+       <br>
+       **Popular CDN Providers**<br>
+       Cloudflare, Akamai,Amazon CloudFront,Google Cloud CDN
+       
+       
     
 
 

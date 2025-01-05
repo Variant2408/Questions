@@ -92,6 +92,44 @@
        <br>
        **Popular CDN Providers**<br>
        Cloudflare, Akamai,Amazon CloudFront,Google Cloud CDN
+
+4.**What is Load Balancer?** <br>
+       A Load Balancer is a device or software that distributes incoming network traffic across multiple servers. The goal is to ensure that no single server becomes overwhelmed, thus               improving the performance and reliability of the application.<br>
+       <br>
+       **Why Use a Load Balancer?** <br>
+          **Scalability:** <br>
+              Distributes traffic evenly across multiple servers, allowing systems to scale horizontally by adding more servers as demand increases. <br>
+          **High Availability:** <br>
+              Ensures continuous application availability by redirecting traffic away from failed or overloaded servers.
+          **Improved Performance:** <br>
+              Balances workloads to prevent bottlenecks, reducing response times for users. <br>
+          **Fault Tolerance:** <br>
+              Automatically reroutes traffic to healthy servers if one or more servers go down. <br>
+          **Resource Optimization:** <br>
+              Ensures all servers are utilized efficiently, avoiding overloading some while others remain underutilized. <br>
+       <br>
+       **Types of Load Balancers** <br>
+       1.Hardware Load Balancers <br>
+       2.Software Load Balancers <br>
+       3.Cloud-Based Load Balancers <br>
+<br>
+       **Load Balancing Algorithms** <br>
+              **1.Round Robin:** <br>
+                     Sequentially routes each request to the next server in the pool. <br>
+                     Best for servers with similar capabilities. <br>
+              **2.Least Connections:** <br>
+                     Directs traffic to the server with the fewest active connections. <br>
+                     Ideal for handling uneven workloads. <br>
+              **3.IP Hash:** <br>
+                     Uses a hash of the client's IP address to determine which server will handle the request. <br>
+                     Useful for maintaining session persistence. <br>
+              **4.Weighted Round Robin/Least Connections:** <br>
+                     Similar to round robin or least connections but considers server weights (e.g., more powerful servers handle more traffic). <br>
+              **5.Random:** <br>
+                     Assigns requests to servers randomly. <br>
+              **6.Geographic Routing:** <br>
+                     Routes traffic based on the client’s geographic location, useful for global applications. <br>
+
        
        
     

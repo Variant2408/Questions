@@ -1,3 +1,121 @@
+#### what is functional interface?
+A functional interface is a special type of interface in programming, primarily used in Java, that contains exactly one abstract method. This single-method requirement makes it ideal for use with lambda expressions and method references, as it provides a clean way to implement functionality with minimal code.
+The most well-known example of a functional interface in Java is java.lang.Runnable, which has a single abstract method run().
+```java
+@FunctionalInterface
+interface Greeting {
+    void sayHello(); // Single abstract method
+}
+
+```
+The @FunctionalInterface annotation is optional but recommended, as it ensures the interface adheres to functional interface rules.
+
+In Java, Consumer, Predicate, Function, and Supplier are functional interfaces from the java.util.function package. They are widely used in functional programming to represent different types of operations. Here's a breakdown of each:
+##### Consumer<T>:
+
+*       Represents an operation that takes a single input but does not return a result.
+
+*       Think of it as something that "consumes" an input to perform an action.
+
+*       Method: void accept(T t)
+
+Example:
+
+```java
+Consumer<String> consumer = s -> System.out.println(s);
+consumer.accept("Hello, Consumer!");
+
+```
+
+##### Predicate<T>:
+
+*       Represents a function that takes a single input and returns a boolean result.
+
+*       It is typically used for conditional checks.
+
+*       Method: boolean test(T t)
+
+Example:
+
+```java
+Predicate<Integer> predicate = n -> n > 0;
+System.out.println(predicate.test(5)); // true
+
+```
+Function<T, R>:
+
+Represents a function that takes a single input of type T and returns a result of type R.
+
+Method: R apply(T t)
+
+Example:
+
+```java
+
+Function<Integer, String> function = n -> "Number: " + n;
+System.out.println(function.apply(5)); // "Number: 5"
+
+```
+##### Supplier<T>:
+
+*       Represents a supplier of results; it takes no input and returns a result.
+
+*       Often used to generate or supply values.
+
+*       Method: T get()
+
+Example:
+
+```java
+Supplier<Double> supplier = () -> Math.random();
+System.out.println(supplier.get()); // Random number
+
+```
+
+#### What is lambda Expression?
+Lambda expression are anonymous funtions. These functions do not need a name or class to be used. lambda expressions express the instance of functional interfaces.
+lambda expressions enable functional programming and make it easier to write clean, simple code, especially when working with functional interfaces.
+**Syntax of a Lambda Expression:**
+The general syntax is:
+
+
+```java
+(parameters) -> expression_or_body
+```
+*       Parameters: The input for the lambda function (can be empty if no input is needed).
+*       Arrow (->): Separates the parameters and the body of the function.
+*       Body: Contains the logic or expression to execute.
+**Examples:**
+Basic Example:
+
+```java
+(int x, int y) -> x + y
+```
+This represents a function that takes two integers and returns their sum.
+Using in Code: If you have an interface like:
+
+
+```java
+@FunctionalInterface
+interface Calculator {
+    int operate(int a, int b);
+}
+
+```
+You can use a lambda expression:
+
+```java
+Calculator add = (a, b) -> a + b;
+System.out.println(add.operate(5, 3)); // Output: 8
+
+```
+Simpler Example with Runnable:
+
+```java
+Runnable runnable = () -> System.out.println("Lambda Expression in Action!");
+new Thread(runnable).start();
+
+```
 1. **What is [indexing](https://www.youtube.com/watch?v=DLCY8_A97LY&list=PLFdAYMIVJQHOWJgRrjv_RH-ng95B2h3ON&index=7&ab_channel=NikhilLohia)? Why it is needed.**<br>
        Indexing in a database is a technique used to optimize the performance of queries by minimizing the amount of data the database needs to process.
        It involves creating a data structure (an index) that allows for faster data retrieval operations on a table, much like an index in a book helps
